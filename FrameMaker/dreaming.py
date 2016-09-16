@@ -132,10 +132,9 @@ class lupa:
 class evolve(evolve_base):
     renderer = TextTRenderer()
     font = "Calibri"
-    text_english = [u"In just one and a half years,", u"the Region's indigenous", u"women and PSYDEH",
-                    u"have used citizen",
+    text_english = [u"In just 1.5 years, the ", u"Region's women and", u"PSYDEH have used citizen",
                     u"education training and", u"community organizing",
-                    u"to dismantle walls and", u"plant seeds. Now they", u"work for fruits to come."]
+                    u"to dismantle walls and", u"plant seeds. Now they", u"work  to harvest the fruits."]
     text_spanish = [u"En solo un a\u00f1o y medio,", u"las mujeres ind\u00edgenas", u"de la Regi\u00f3n y PSYDEH",
                     u"han desmantelado las", u"paredes, plantado", u"semillas y sue\u00f1an con",
                     u"los frutos que brotar\u00e1n."]
@@ -170,14 +169,14 @@ class evolve(evolve_base):
         self.list.append(still(start))
         self.list.append(text(start, 430 + 60, self.phrase1))
 
-        self.list.append(Line(start + 79, start + 79 + 7, (947 - 3, 231 + 4), (1058 + 3, 231 + 4)))
+        self.list.append(Line(start + 79-20, start + 79 -20 + 7, (1098, 185 + 4), (1216, 185 + 4)))
         #self.list.append(Line(start + 86, start + 86 + 9, (752 - 3, 277 + 4), (930 + 3, 277 + 4)))
         #self.list.append(Line(start + 96, start + 96 + 8, (944 - 3, 277 + 4), (1083 + 3, 277 + 4)))
-        self.list.append(Line(start + 86, start + 96 + 8, (752 - 3, 277 + 4), (1083 + 3, 277 + 4)))
+        self.list.append(Line(start + 86-20, start + 96 -20 + 8, (752 - 3, 231 + 4), (1083 + 3, 231 + 4)))
 
         #self.list.append(Line(start + 109, start + 109 + 8, (753 - 3, 323 + 4), (957 + 3, 323 + 4)))
         #self.list.append(Line(start + 118, start + 118 + 10, (970 - 3, 323 + 4), (1154 + 3, 323 + 4)))
-        self.list.append(Line(start + 108, start + 118 + 10, (753 - 3, 323 + 4), (1154 + 3, 323 + 4)))
+        self.list.append(Line(start + 108-20, start + 118 -20+ 10, (753 - 3, 277 + 4), (1154 + 3, 277 + 4)))
 
         self.list.append(apple(start + 70, start + 410 + 60, positions[1]))  # could put the commands into a loop
         self.list.append(apple(start + 75, start + 410 + 60, positions[2]))

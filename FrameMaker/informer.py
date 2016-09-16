@@ -83,7 +83,7 @@ class pullWall:
 class handShake:
     def __init__(self, start):
         self.startTime = start
-        self.stopTime = start + 390
+        self.stopTime = start + 390 +30
 
     def draw(self, frame, image):
         if (frame < self.startTime or frame >= self.stopTime):
@@ -128,10 +128,9 @@ class gradient:
 class evolve(evolve_base):
     renderer = TextTRenderer()
     font = "Calibri Bold"
-    text_english = [u"Despite living in isolated communities separated ",
-                    u"by \"walls\", dividing community from community",
-                    u"and the Region from the world, indigenous",
-                    u"people work for different.",
+    text_english = [u"Here, indigenous people have begun to break",
+                    u"down the wall that divide community from",
+                    u"community and the Region from the World.",
                     u"             ",
                     u"These walls include:",
                     u"             ",
@@ -182,11 +181,11 @@ class evolve(evolve_base):
                                    Helpers.getLetterRatio(text_english, text_spanish)]}
 
     text_english = [u"These seeds: ", "             ",
-                    u"   - Identify shared problems", "             ",
-                    u"   - Reach clarity on solutions", "             ",
+                    u"   - Identify shared interests", "             ",
+                    u"   - Reach clarity on solutions to problems", "             ",
                     u"   - Adopt leader disciplines to implement", u"      solutions", "             ",
                     u"   - Exercise rights & laws on which solutions", u"      are based", "             ",
-                    u"   - Assert personal & communal autonomy"]
+                    u"   - Assert communal autonomy and joint power"]
 
     text_spanish = [u"Estas semillas significan aprender acerca de: ", "             ",
                     u"   - Problemas en com\u00fan", "             ",
@@ -201,19 +200,19 @@ class evolve(evolve_base):
 
     def __init__(self, start):
         self.startTime = start
-        self.stopTime = start + 1170 + 50+40
+        self.stopTime = start + 1170 + 50+25
         self.list = []
         self.list.append(image(start, 450, Helpers.open_image("./sequences/pullWall2/frame0.png", 190)))
-        self.list.append(text(start, 400+40, 50, self.phrase1))
+        self.list.append(text(start, 400, 50, self.phrase1))
         self.list.append(pullWall(start + 450))
         # self.list.append(gradient(start + 450 + 120))
         text_lines = [Line(304, 304+24, (600-468-3, 700-58+3), (696+3, 700-58+3))]
         text_lines.append(Line(304+44, 304+44+20, (600-468-3, 700-58+3+120), (696-35+3, 700-58+3+120)))
 
-        self.list.append(text(start + 450+40, 350, 50, self.phrase2, pos_y=400, text_addons=text_lines))
-        self.list.append(handShake(start + 810+40))
-        self.list.append(text(start + 810 + 50+40, 290, 50, self.phrase3))
+        self.list.append(text(start + 450, 350, 50, self.phrase2, pos_y=400, text_addons=text_lines))
+        self.list.append(handShake(start + 810))
+        self.list.append(text(start + 810 + 50, 290+25, 50, self.phrase3))
         self.list.append(Transitions.horizontalFlip(Helpers.open_image("./sequences/pullWall2/frame175.png", 190),
                                                     cairo.ImageSurface.create_from_png(
                                                         "./sequences/seednwater/frame0.png"),
-                                                    start + 1150 + 50+40, 20))
+                                                    start + 1150 + 50+25, 20))

@@ -342,7 +342,7 @@ class evolve(evolve_base):
     phrase4 = {Languages.ENGLISH: renderer.makeImage(text_english, font, 35),
                Languages.SPANISH: renderer.makeImage(text_spanish, font, 35)}
 
-    text_english = [u"\u25cf A Public Forum where women present their",u"    development agenda to new government", u"    leaders."]
+    text_english = [u"\u25cf A Public Forum where women share their",u"    ideas with new government officials."]
     text_spanish = [u"Programa de Entrenamiento Narrativo para", u"las mujeres l\u00edderes de la Red \"paraguas\""]
 
     phrase5 = {Languages.ENGLISH: renderer.makeImage(text_english, font, 35),
@@ -375,10 +375,10 @@ class evolve(evolve_base):
         self.list.append(stickman(start + 430))
 
         # self.list.append(leaf(start + 430, start + 440, 200, cairo.ImageSurface.create_from_png("./images/leaf1.png")))
-        self.list.append(leafText(start + 595, 75, self.phrase3, (300-40, 200)))
+        self.list.append(leafText(start + 595, 75, self.phrase3, (300-40, 190)))
         # self.list.append(leaf(start + 430, start + 510, 300, cairo.ImageSurface.create_from_png("./images/leaf2.png")))
-        self.list.append(leafText(start + 515, 75+80, self.phrase4, (300-40, 300)))
+        self.list.append(leafText(start + 515, 75+80, self.phrase4, (300-40, 330)))
         # self.list.append(leaf(start + 430, start + 590, 400, cairo.ImageSurface.create_from_png("./images/leaf3.png")))
-        self.list.append(leafText(start + 445, 75+150, self.phrase5, (300-40, 400)))
+        self.list.append(leafText(start + 445, 75+150, self.phrase5, (300-40, 470)))
         # self.list.append(leaf(start + 430, start + 660, 450, cairo.ImageSurface.create_from_png("./images/leaf4.png")))
         # self.list.append(leafText(start + 665, 75, self.phrase6, (300, 450)))
